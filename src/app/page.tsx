@@ -24,6 +24,7 @@ export default function Home() {
           <li>This is a test.</li>
           <li>This is also a test!</li>
           <li>Dang hot reload test.</li>
+          <li>Different workstation commit test</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
