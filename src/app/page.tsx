@@ -1,6 +1,23 @@
+import { useEffect } from 'react';
 import Image from "next/image";
 
 export default function Home() {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.Telegram) {
+      // Initialize Telegram Web App SDK
+      const tg = window.Telegram.WebApp;
+      tg.ready();  // Notify Telegram that the web app is ready
+
+      // Set up the MainButton with some text and a click handler
+      tg.MainButton.setText("Press me");
+      tg.MainButton.onClick(() => {
+        tg.sendData("Button pressed!"); // This sends data to the bot
+      });
+      tg.MainButton.show(); // Show the button in the Telegram Web App
+    }
+  }, []);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
