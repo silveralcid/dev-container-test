@@ -21,6 +21,9 @@ export default function Home() {
             .
           </li>
           <li>Save and see your changes instantly.</li>
+          <li>This is a test.</li>
+          <li>This is also a test!</li>
+          <li>Dang hot reload test.</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">

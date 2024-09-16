@@ -1,0 +1,17 @@
+{
+	"name": "Alpine",
+	"dockerFile": "./Dockerfile",
+	"context": "..",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/sh"
+			},
+			"extensions": [
+				"esbenp.prettier-vscode", // Prettier extension for formatting
+				"dbaeumer.vscode-eslint" // ESLint extension for linting
+			]
+		}
+	},
+	"postCreateCommand": "npm install"
+}
